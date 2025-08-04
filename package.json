@@ -4,6 +4,6 @@
   "description": "Minimal reproduction for Claude Code Action Dependabot issue",
   "dependencies": {
     "lodash": "4.17.15",
-    "axios": "0.21.1"
+    "axios": "0.30.0"
   }
 }
