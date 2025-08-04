@@ -1,4 +1,4 @@
-name: Claude Code Review - Beta
+name: Claude Code Review - with Fix
 
 on:
   pull_request:
@@ -20,8 +20,9 @@ jobs:
           fetch-depth: 1
       - name: Run Claude Code Review
         id: claude-review
-        uses: anthropics/claude-code-action@beta
+        uses: yellow-pine/claude-code-action@fix/dependabot-token-permissions
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          trusted_bots: dependabot[bot]
           use_sticky_comment: true

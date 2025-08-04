@@ -43,3 +43,7 @@ To trigger Dependabot updates manually:
 ## Commit Convention
 
 This repository uses conventional commits (e.g., `feat:`, `fix:`, `docs:`).
+
+## Development Workflow
+
+- Always use conventional commits, always push after committing.
