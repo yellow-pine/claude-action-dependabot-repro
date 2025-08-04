@@ -18,11 +18,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.CLAUDE_GITHUB_APP_ID }}
+          private-key: ${{ secrets.CLAUDE_GITHUB_PRIVATE_KEY }}
+
       - name: Run Claude Code Review
         id: claude-review
         uses: yellow-pine/claude-code-action@fix/dependabot-token-permissions
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ steps.app-token.outputs.token }}
           trusted_bots: dependabot[bot]
           use_sticky_comment: true
