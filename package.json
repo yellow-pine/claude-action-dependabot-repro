@@ -2,8 +2,24 @@
   "name": "claude-action-dependabot-repro",
   "version": "1.0.0",
   "description": "Minimal reproduction for Claude Code Action Dependabot issue",
+  "homepage": "https://github.com/yellow-pine/claude-action-dependabot-repro#readme",
+  "bugs": {
+    "url": "https://github.com/yellow-pine/claude-action-dependabot-repro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yellow-pine/claude-action-dependabot-repro.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "lodash": "4.17.15",
     "axios": "0.21.1"
-  }
+  },
+  "devDependencies": {}
 }
