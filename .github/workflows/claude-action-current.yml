@@ -1,0 +1,21 @@
+name: Claude Code Action (Current - Will Fail)
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  claude-review-fail:
+    runs-on: ubuntu-latest
+    name: Claude Review (Shows Failure)
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      # This will fail with permission error for Dependabot
+      # Error: "Actor does not have write permissions to the repository"
+      - name: Claude Code Review
+        uses: anthropics/claude-code-action@beta
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
