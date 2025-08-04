@@ -10,8 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/yellow-pine/claude-action-dependabot-repro.git"
   },
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": {
+    "name": "Cansin Yildiz",
+    "email": "cansin@yellowpine.com",
+    "url": "https://cansinyildiz.com"
+  },
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
